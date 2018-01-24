@@ -1,0 +1,6 @@
+.serverless
+.idea
+*.zip
+*.iml
+
+main
