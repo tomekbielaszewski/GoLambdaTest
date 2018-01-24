@@ -1,0 +1,19 @@
+service: hello-go
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: us-west-2
+
+package:
+  artifact: deployment2.zip
+
+functions:
+  hello-go:
+    handler: main
+    events:
+      - http:
+          path: main
+          method: get
